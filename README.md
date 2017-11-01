@@ -33,13 +33,21 @@ range form 1-18, we need a space of two characters.
 An empty score sheet should look like this:
 
 > Player name:
+
 >              -------------------------------
+
 > Red          | % % |XX| % % | | | |
+
 >           ----------------------------------
+
 > Yellow    | | | | | |XX| % % | |
+
 >           ----------------------------------
+
 > Blue      | | % % |XX| | | | % %
+
 >           -------------------------------
+
 > Failed throws:
 
 At the end of a game, a score sheet may look like as below:
