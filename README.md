@@ -1,8 +1,8 @@
 # Qwinto_Qwixx_Boardgame
 
-##Fall 2017 - CSI2372 - Project
+## Fall 2017 - CSI2372 - Project
 
-###Playing Dice
+### Playing Dice
 
 In this year’s project, you are asked to program two versions of a console game based on a simple game
 of rolling dice. In both versions of the game, the points from a roll are recorded on a score sheet. The goal
@@ -10,7 +10,7 @@ of both versions of the game is to achieve the highest score overall. Interestin
 rolling dice but all players can record (some of) the points for all rolls. The versions of the games are
 displayed by printing the score sheet for each player on the console.
 
-###Version A (Qwinto)
+### Version A (Qwinto)
 
 In this version, the players take turns rolling up to three dice but all players can record the points for all
 rolls. The player who rolls the dice can decide to roll one, two or three dice. The dice are colour-coded
@@ -33,25 +33,27 @@ range form 1-18, we need a space of two characters.
 An empty score sheet should look like this:
 
 
-Player name:
- -------------------------------
-Red | % % |XX| % % | | | |
- ----------------------------------
-Yellow | | | | | |XX| % % | |
- ----------------------------------
-Blue | | % % |XX| | | | % %
- -------------------------------
-Failed throws:
+\ Player name:
+\ -------------------------------
+\ Red | % % |XX| % % | | | |
+\ ----------------------------------
+\ Yellow | | | | | |XX| % % | |
+\ ----------------------------------
+\ Blue | | % % |XX| | | | % %
+\ -------------------------------
+\ Failed throws:
+
 At the end of a game, a score sheet may look like as below:
-Player name: Jane Doe Points: 28
- -------------------------------
-Red | 2% 3% 6|XX| 9%11%12|13|15|16|
- ----------------------------------
-Yellow | 1| 3| 4| 5| |XX|12%13% | |
- ----------------------------------
-Blue | 1| 3% % 6|XX| 7| | |10% %
- -------------------------------
-Failed throws: 1 2 3
+
+\Player name: Jane Doe Points: 28
+\ -------------------------------
+\ Red | 2% 3% 6|XX| 9%11%12|13|15|16|
+\ ----------------------------------
+\ Yellow | 1| 3| 4| 5| |XX|12%13% | |
+\ ----------------------------------
+\ Blue | 1| 3% % 6|XX| 7| | |10% %
+\ -------------------------------
+\ Failed throws: 1 2 3
 
 
 Jane Doe scored 28 points: The red row is complete and hence the right most score is used (16 points).
@@ -87,29 +89,31 @@ of two characters.
 An empty score sheet should look like this:
 
 
-Player name:
- ------------------------------------
-Red | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
- ------------------------------------
-Yellow | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
- ------------------------------------
-Green |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
- ------------------------------------
-Blue |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
- ------------------------------------
+\Player name:
+\ ------------------------------------
+\Red | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
+\ ------------------------------------
+\Yellow | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
+\ ------------------------------------
+\Green |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
+\ ------------------------------------
+\Blue |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
+\ ------------------------------------
 Failed throws:
+
 At the end of a game, a score sheet may look like as below:
-Player name: Jane Doe Points: 26
- ------------------------------------
-Red | 2| 3| 4| 5| 6| 7| 8|XX|XX|11|XX| U
- ------------------------------------
-Yellow | 2|XX| 4| 5|XX|XX| 8| 9|10|11|12| U
- ------------------------------------
-Green |12|11|10|XX| 8|XX| 6|XX|XX| 3|XX| L
- ------------------------------------
-Blue |12|XX|10| 9| 8| 7| 6|XX| 4| 3| 2| U
- ------------------------------------
-Failed throws: 1 2
+
+\Player name: Jane Doe Points: 26
+\ ------------------------------------
+\Red | 2| 3| 4| 5| 6| 7| 8|XX|XX|11|XX| U
+\ ------------------------------------
+\Yellow | 2|XX| 4| 5|XX|XX| 8| 9|10|11|12| U
+\ ------------------------------------
+\Green |12|11|10|XX| 8|XX| 6|XX|XX| 3|XX| L
+\ ------------------------------------
+\Blue |12|XX|10| 9| 8| 7| 6|XX| 4| 3| 2| U
+\ ------------------------------------
+\Failed throws: 1 2
 
 
 In the above example, Jane Doe scored 28 points: The red and yellow rows have three entries which count
