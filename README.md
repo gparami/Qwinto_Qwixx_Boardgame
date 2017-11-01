@@ -25,43 +25,37 @@ player. After four failed throws, the game ends. The game also ends if one playe
 completely. The scoring is a mixture between the number of scores entered in each row plus a special
 bonus for a filled overlapping column. Completely filled rows are counted differently. Instead of counting
 the number of entries, the score of the right-most entry is counted.
+
 The score sheet for this version needs 4 rows in our adaption: one row for each colour of dice: red, yellow
 and blue, as well as a fourth row for the failed throws. We need a maximum of twelve columns. The
 bonus fields are marked within % while invalid fields are marked XX. Notice that since the scores have a
 range form 1-18, we need a space of two characters.
  
-An empty score sheet should look like this:
+###### An empty score sheet should look like this:
+```
+Player name:
+ -------------------------------
+Red | % % |XX| % % | | | |
+ ----------------------------------
+Yellow | | | | | |XX| % % | |
+ ----------------------------------
+Blue | | % % |XX| | | | % %
+ -------------------------------
+Failed throws:
+```
 
-> Player name:
-
->              -------------------------------
-
-> Red          | % % |XX| % % | | | |
-
->           ----------------------------------
-
-> Yellow    | | | | | |XX| % % | |
-
->           ----------------------------------
-
-> Blue      | | % % |XX| | | | % %
-
->           -------------------------------
-
-> Failed throws:
-
-At the end of a game, a score sheet may look like as below:
-
-\Player name: Jane Doe Points: 28
-\ -------------------------------
-\ Red | 2% 3% 6|XX| 9%11%12|13|15|16|
-\ ----------------------------------
-\ Yellow | 1| 3| 4| 5| |XX|12%13% | |
-\ ----------------------------------
-\ Blue | 1| 3% % 6|XX| 7| | |10% %
-\ -------------------------------
-\ Failed throws: 1 2 3
-
+###### At the end of a game, a score sheet may look like as below:
+```
+Player name: Jane Doe Points: 28
+ -------------------------------
+Red | 2% 3% 6|XX| 9%11%12|13|15|16|
+ ----------------------------------
+Yellow | 1| 3| 4| 5| |XX|12%13% | |
+ ----------------------------------
+Blue | 1| 3% % 6|XX| 7| | |10% %
+ -------------------------------
+Failed throws: 1 2 3
+```
 
 Jane Doe scored 28 points: The red row is complete and hence the right most score is used (16 points).
 The yellow row has 6 entries and the blue row has 5 entries. Two bonus columns are completed for an
@@ -71,7 +65,7 @@ This game is an adaption of the game Qwinto by Bernhard Lach and Uwe Rapp which 
 Gigamic, Nürnberger-Spielkarten-Verlag and White Goblin Games. You can find an English review at
 https://www.boardgamegeek.com/boardgame/183006/qwinto.
 
-###Version B (Qwixx)
+### Version B (Qwixx)
 
 In this version, the players take turns rolling up to six dice. The player who rolls the dice can decide to
 record one or two scores, the other players can decide to record none or one score. The dice are colourcoded
@@ -89,98 +83,106 @@ score for the player. After four failed throws, the game ends. The game also end
 locked. A player locks a row by scoring at least five fields in a row including the last field (either a 2 or
 12). If a row is locked, the dice of the corresponding colour is removed from the game. The scoring is a
 weighted count of the number of scores entered in each row minus the penalty for failed throws.
+
 The score sheet for this version needs five rows in our adaption: one row for each colour of dice: red,
 yellow and blue, as well as a fifth row for the failed throws. We need a maximum of twelve columns. The
 right most column is the lock field. Notice that since the scores have a range form 2-12, we need a space
 of two characters.
-An empty score sheet should look like this:
 
+###### An empty score sheet should look like this:
 
-\Player name:
-\ ------------------------------------
-\Red | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
-\ ------------------------------------
-\Yellow | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
-\ ------------------------------------
-\Green |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
-\ ------------------------------------
-\Blue |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
-\ ------------------------------------
-Failed throws:
+```
+Player name:
+ ------------------------------------
+Red | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
+ ------------------------------------
+Yellow | 2| 3| 4| 5| 6| 7| 8| 9|10|11|12| U
+ ------------------------------------
+Green |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
+ ------------------------------------
+Blue |12|11|10| 9| 8| 7| 6| 5| 4| 3| 2| U
+ ------------------------------------
+Failed throws: 
+```
 
-At the end of a game, a score sheet may look like as below:
+###### At the end of a game, a score sheet may look like as below:
 
-\Player name: Jane Doe Points: 26
-\ ------------------------------------
-\Red | 2| 3| 4| 5| 6| 7| 8|XX|XX|11|XX| U
-\ ------------------------------------
-\Yellow | 2|XX| 4| 5|XX|XX| 8| 9|10|11|12| U
-\ ------------------------------------
-\Green |12|11|10|XX| 8|XX| 6|XX|XX| 3|XX| L
-\ ------------------------------------
-\Blue |12|XX|10| 9| 8| 7| 6|XX| 4| 3| 2| U
-\ ------------------------------------
-\Failed throws: 1 2
-
+```
+Player name: Jane Doe Points: 26
+ ------------------------------------
+Red | 2| 3| 4| 5| 6| 7| 8|XX|XX|11|XX| U
+ ------------------------------------
+Yellow | 2|XX| 4| 5|XX|XX| 8| 9|10|11|12| U
+ ------------------------------------
+Green |12|11|10|XX| 8|XX| 6|XX|XX| 3|XX| L
+ ------------------------------------
+Blue |12|XX|10| 9| 8| 7| 6|XX| 4| 3| 2| U
+ ------------------------------------
+Failed throws: 1 2
+```
 
 In the above example, Jane Doe scored 28 points: The red and yellow rows have three entries which count
 for 6 points each, and the blue row has two entries which counts for three points. The green row has five
 entries and was locked by Jane Dow, which counts as six entries (5 scores plus the lock) and hence as 21
 points. Two failed throws are recorded at 2 times -5 = -10.
 The entire scoring table is as follows:
-Entries 1 2 3 4 5 6 7 8 9 10 11 12
-Points 1 3 6 10 15 21 28 36 45 55 66 78
+
+| Entries  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10  | 11  | 12  |
+| Points  | 1  | 3  | 6  | 10  | 15  | 21  | 28  | 36  | 45  | 55  | 66  | 78  |
+
 This game is an adaption of the game Qwixx by Steffen Berndorf which was published by NürnbergerSpielkarten-Verlag
 and others, for a description see
 https://boardgamegeek.com/boardgame/131260/qwixx
 
-###Class Design
+### Class Design
 
 The design of our implementation will allow a player to choose at run-time which game version to play
 with 1-3 players. The main loop of the game is common between the two versions of the game. Code
 reuse is one of our main design goals and we will use object-oriented and generic features of C++ to
 achieve it. We will follow the AAA approach meaning you should use “almost always auto”. You will
 have to overload operators, use the standard template library and perform error checking. You will also
-need to implement test drivers as a main routine, e.g., for the class QwintoScoreSheet in the file
-qwintoscoresheet.cpp which can be activated with a compile switch
-TEST_QWINTOSCORESHEET. Your code has not only to “work” but be commented and be well
-written for full marks. The marks for each class are given in square brackets.
+need to implement test drivers as a main routine, e.g., for the class `QwintoScoreSheet` in the file
+`qwintoscoresheet.cpp` which can be activated with a compile switch `TEST_QWINTOSCORESHEET`. Your code has not only to “work” but be commented and be well written for full marks. The marks for each class are given in square brackets.
 
-###Colour [0.5]
+### Colour [0.5]
 
 Colour should be a scoped enumeration with the values RED, YELLOW, GREEN, BLUE and WHITE.
 
-###RandomDice [1]
+### RandomDice [1]
 
 RandomDice should be a helper structure with only static objects. The structure has the task to hold all
 objects needed to use one std::uniform_int_distribution for all dice ensuring that the pseudo
 random numbers do not start at the same value.
 
-###Dice [1.5]
+### Dice [1.5]
 
 Dice should be a structure storing a const Colour and a face as integer between 1 and 6. Dice provides
 the function roll which changes its face value randomly between 1 and 6 and return the face rolled as
 int. You will need to overload the insertion operator to print the Dice to an output stream.
 
-###RollOfDice [3]
+### RollOfDice [3]
 
 RollOfDice is a simple container structure that holds multiple dice as in a roll. The size of the
 container should grow and shrink to the number of Dice in the particular roll. Provide all necessary
 operators and functions to enable the use of range loops over a RollOfDice:
+```
 RollOfDice rd;
 for ( Dice d : rd )
+```
 RollOfDice should provide the function roll which simply calls roll on all Dice in the container. It
 should also provide the function pair that returns a RollOfDice with two selected Dice in it. A
 RollOfDice should also have a conversion operator to integer that simply adds up all the faces in the
 roll. You will also need to overload the insertion operator to print the RollOfDice to an output stream.
 
-###QwintoRow<Colour> [2.5]
+### QwintoRow\<Colour> [2.5]
 
 A row in Qwinto holds a fixed sized array. A QwintoRow is templated for a certain Colour, i.e., a nontype
 template parameter. Overload the indexing or subscript operator[] to add an integer score at a certain
 index. You should be able to write:
+```
 QwintoRow<RED> row; RollOfDice rd;
 row[2] = rd;
+```
 The subscript operator will directly work with a roll of dice because of its conversion operator to integer.
 The operator cannot perform any error checking. There should be a separate function validate which
 should perform error checking for adding a RollofDice to the row at a certain index and returns true if
@@ -196,7 +198,7 @@ two. The compound assignment operator should perform error checking and throw an
 You will also need to overload the insertion operator to print the QwixxRow to an output stream, e.g.,
 for ScoreSheet.
 
-###ScoreSheet [2]
+### ScoreSheet [2]
 
 The class ScoreSheet is the abstract parent class for the two different score sheets in Qwixx and
 Qwinto. It needs to hold the name of the player, the number of failed attempts and the overall score. A
@@ -210,14 +212,14 @@ if the ScoreSheet indicates that the game has ended. You need to overload the in
 the class ScoreSheet for printing. This global operator should behave polymorphically, even though,
 there is no polymorphism for global operators and functions.
 
-###QwintoScoreSheet [2]
+### QwintoScoreSheet [2]
 
 The class QwintoScoreSheet is a child class of ScoreSheet and implements all pure virtual
 functions of the parent, i.e., it is a concrete class. The class is to hold three QwintoRow of the
 appropriate colours. You need to overload the insertion operator for the class QwintoScoreSheet for
 printing.
 
-###QwixxScoreSheet [2]
+### QwixxScoreSheet [2]
 
 The class QwixxScoreSheet is a child class of ScoreSheet and implements all pure virtual
 functions of the parent, i.e., it is a concrete class. The class is to hold four QwixxRow of the appropriate
@@ -225,7 +227,7 @@ colours. Construct the red and yellow row with a std::vector and the blue and gr
 std::list. You need to overload the insertion operator for the class QwixxScoreSheet for
 printing.
 
-###Player [2]
+### Player [2]
 
 The parent class Player provides functions for console input and output to a player. It should hold a
 boolean to indicate if the this player is the active player. The input/output functions are pure virtual
@@ -233,34 +235,34 @@ functions and are named inputBeforeRoll and inputAfterRoll. The functions need t
 RollOfDice by reference. The functions will have to behave differently depending if the current Player
 is active or not.
 
-###QwintoPlayer [1.5]
+### QwintoPlayer [1.5]
 
 The class QwintoPlayer holds a QwintoScoreSheet and implements the functions
 inputBeforeRoll and inputAfterRoll.
 
-###QwixxPlayer [1.5]
+### QwixxPlayer [1.5]
 
 The class QwixxPlayer holds a QwixxScoreSheet and implements the function
 inputBeforeRoll, inputAfterRoll.
 
-###Main Loop Pseudo Code [4]
+### Main Loop Pseudo Code [4]
 
-Ask player to choose game version, number of players and names of
-players.
+```
+Ask player to choose game version, number of players and names of players.
 Create the corresponding players and RollOfDice for the game.
 while end condition is not reached
-next player takes a turn i.e., becomes active
-get input from active player before roll
-roll dice and show result
-print scoresheet of active player
-get input from active player after roll
-score dice according to input from active player
-loop over all non-active players
-print scoresheet of non-active player
-get input from non-active player
-score dice according to input
-loop over all players
-calculate points for player
-print scoresheet
+    next player takes a turn i.e., becomes active
+    get input from active player before roll
+    roll dice and show result
+    print scoresheet of active player
+    get input from active player after roll
+    score dice according to input from active player
+    loop over all non-active players
+        print scoresheet of non-active player
+        get input from non-active player
+        score dice according to input
+    loop over all players
+        calculate points for player
+        print scoresheet
 print overall winner
- 
+```
