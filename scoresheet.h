@@ -24,21 +24,29 @@ class ScoreSheet {
 	// inserts the score sheet formatted as in the above example into the stream.
 public:
 	void print(const ostream& os) const;
-	enum class Colour { RED, YELLOW, BLUE };
+	enum class Colour { RED, YELLOW, GREEN, BLUE, WHITE };
 
 	struct Dice { // no private 
 		int value; // from 1 to 6
 		Colour colour;
-		void print();
+		void print(ostream& os) const;
 	};
 	//constructor that accepts name of player as std::string
 	ScoreSheet(const std::string& _firstName = "", const string& _lastName = "");
 	//function score accepts a vector of structure Dice and the user selected 
 
-
-
-
 	//colour and position counted from the left
+
+    ~ScoreSheet();
+};
+
+class RollOfDice{
+    std::vector <Dice> d_die;
+public:
+    RollOfDice rd;
+    void roll();// calls roll on all Dice in the container
+    RollOfDice pair(const Dice& die); //returns a RollOfDice w/ 2 selected Dice in it.
+    // should also have a conversion operator to integer
 };
 
 
