@@ -1,48 +1,40 @@
 //
-// Created by luxmy on 2017-11-14.
+// Created by Parami Gunasekara on 2017-11-29.
 //
-#include "scoresheet.h"
 
-//-------------------------------------
-//RandomDice is a helper function w/ only static objects
-//structure holds all objects needed to
-// use one std::uniform_int_distribution FOR ALL dice ensuring
-//that the pseudo random numbers do not start at the same value
+#include "Dice.h"
 
-//---------------------------------------
-//Dice -> struct storing a const Colour &
-// face as int between 1 and 6
-// return the face rolled as int
-// need to overload the insertion operator to print the
-// Dice to an output stream
+/**
+    Changes the face value of this dice to a random int between 1 and 6
+    using the getRandomFaceValue function from the RandomDice structure.
+*/
+void Dice::roll() { diceValue = RandomDice::getRandomFaceValue(); }
 
 
-//----------------------------------------
-//RollOfDice -> container structure that holds multiple dice
-// as in a roll
-// The size of container should grow & shrink to # of Dice in
-// a particular roll
+/**
+    Converts the Dice enum to a string value.
 
-// RollOfDice rd;
-// for( Dice d : rd )
-
-//  - provides a function roll which calls roll on all Dice in
-//    the container
-//  - provides the function pair that returns a RollOfDice w/ 2 selected
-//    Dice in it.
-//  - should also have a conversion operator to integer
-
-void RollOfDice::roll()// calls roll on all Dice in the container
-{
-    for( Dice d : rd)
-    {
-        d.value = (rand() % 6) + 1;
-    }
-
+    @param diceColour the enum value to convert to string.
+    @return a string value corresponding to the enum diceColour
+*/
+std::string Dice::toString(const Dice::Colour &diceColour) const {
+    std::string stringColour;
+    if (diceColour == Colour::RED) {stringColour = "RED";}
+    else if (diceColour == Colour::YELLOW) {stringColour = "YELLOW";}
+    else if (diceColour == Colour::GREEN) {stringColour = "GREEN";}
+    else if (diceColour == Colour::BLUE) {stringColour = "BLUE";}
+    else if (diceColour == Colour::WHITE) {stringColour = "WHITE";}
+    return stringColour;
 }
-RollOfDice RollOfDice::pair(const Dice& dice1, const Dice& dice2)
-{
-    diceOne = (rand() % 6) + 1;
-    diceTwo = (rand() % 6) + 1;
 
+/**
+    Overloaded insertion operator to print the Dice to an output stream.
+
+    @param _os the output stream that
+    @param dice the dice object to be put into the output stream.
+    @return an output stream containing a structured Dice object.
+*/
+ostream& operator<<( ostream& _os, const Dice& dice) {
+    _os << dice.toString(diceColour) << "\t" << dice.diceValue << "\t";
+    return _os;
 }
