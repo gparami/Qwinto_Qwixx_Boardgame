@@ -16,12 +16,12 @@ int main() {
 
 	cout << "Select the game version you wish to play" << endl;
 
-	ScoreSheet* score = new ScoreSheet("First", "Last");
+	ScoreSheet* score = new ScoreSheet();
 	
 	//score->print(cout);
 	std::cin >> *score;
 	cout << score;
 
-
+	return 0;
 }
 #endif // !TEST_SCORESHEET

@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+using std::vector;
 using std::string;
 using std::ostream;
 using std::istream;
@@ -40,8 +41,14 @@ public:
 };
 
 struct RollOfDice {
+private:
+	vector<int> numberOfRolls;
+public:
 	void roll(Dice&);
-	//RollofDice pair(Dice&, Dice&);
+	RollOfDice pair(Dice&, Dice&);
+	friend operator+(const RollOfDice& lhs, const RollOfDice& rhs);
+	friend istream& operator>>(istream&, RollOfDice&);
+	friend ostream &operator<< (ostream &os, const RollOfDice&);
 
 };
 
@@ -60,7 +67,7 @@ class ScoreSheet {
 public:
 	void print(ostream& os) const;
 	ScoreSheet(const string& _firstName = "", const string& _lastName = "");
-	void score(std::vector<Dice> dice, std::string colour, int position);
+	void score(std::vector<Dice> dice, std::string colour, int position = -1);
 	
 	friend istream& operator>>(istream&, ScoreSheet&);
 	friend ostream& operator<<(ostream&, const ScoreSheet&);

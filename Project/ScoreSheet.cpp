@@ -34,6 +34,20 @@ int Dice::roll() {
 	return d_value;
 }
 
+istream& operator >>(istream& _is, Dice& _d) {
+	_is >> _d.d_value;
+	return _is;
+}
+
+ostream& operator<<(ostream& _os, const Dice& _d) {
+	if (_d.d_value > 0) {
+		_os << "You rolled " << _d.d_value << "times" << endl;
+	}
+	
+	return _os;
+}
+
+
 void Dice::print(ostream& os) const {
 
 	os << colourStr(d_colour) << ": ";
@@ -54,7 +68,15 @@ void ScoreSheet::print(ostream& os) const {
 	os << "Failed Throws:" << endl;
 }
 
-ScoreSheet::ScoreSheet(const std::string& _firstName, const std::string& _lastName):
+void RollOfDice::roll(Dice& dice) {
+	numberOfRolls.push_back(dice.roll);
+}
+
+RollOfDice RollOfDice::pair(Dice& d1, Dice& d2) {
+
+}
+
+ScoreSheet::ScoreSheet(const string& _firstName, const string& _lastName):
 	player_firstName(_firstName), player_lastName(_lastName), score_overall(0){}
 
 istream& operator >>(istream& _is, ScoreSheet& _s) {
