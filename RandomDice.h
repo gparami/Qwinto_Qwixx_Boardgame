@@ -3,6 +3,7 @@
     RandomDice.h
     Purpose: A helper structure for rolling function of a Dice objects.
 
+    @see http://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
     @author Parami Gunasekara
     @version 1.0 2017-11-29
 */

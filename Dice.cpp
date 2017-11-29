@@ -10,6 +10,8 @@
 /**
     Changes the face value of this dice to a random int between 1 and 6
     using the getRandomFaceValue function from the RandomDice structure.
+
+    @see RandomDice.cpp
 */
 void Dice::roll() { diceValue = RandomDice::getRandomFaceValue(); }
 
