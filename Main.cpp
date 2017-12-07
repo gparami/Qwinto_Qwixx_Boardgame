@@ -1,11 +1,12 @@
 //
-// Created by Parami Gunasekara on 2017-12-06.
+// Created by Parami Gunasekara on 2017-12-07.
 //
 
-#include "Main.h"
-#include "RollOfDice.h"
+#include <iostream>
+#include "Aesthetics.cpp"
 
 int main() {
 
+    Aesthetics::printIntro();
     return 0;
 }
