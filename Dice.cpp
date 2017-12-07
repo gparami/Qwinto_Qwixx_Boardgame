@@ -7,21 +7,12 @@
 */
 #include "Dice.h"
 
-/**
-    Changes the face value of this dice to a random int between 1 and 6
-    using the getRandomFaceValue function from the RandomDice structure.
+Dice::Dice(Dice::Colour colour) : diceColour(colour) { roll(); }
 
-    @see RandomDice.cpp
-*/
 void Dice::roll() { diceValue = RandomDice::getRandomFaceValue(); }
 
+int Dice::getDiceValue() const { return diceValue; }
 
-/**
-    Converts the Dice enum to a string value.
-
-    @param diceColour the enum value to convert to string.
-    @return a string value corresponding to the enum diceColour
-*/
 std::string Dice::toString(const Dice::Colour &diceColour) const {
     std::string stringColour;
     if (diceColour == Colour::RED) {stringColour = "RED";}
@@ -32,14 +23,7 @@ std::string Dice::toString(const Dice::Colour &diceColour) const {
     return stringColour;
 }
 
-/**
-    Overloaded insertion operator to print the Dice to an output stream.
-
-    @param _os the output stream that
-    @param dice the dice object to be put into the output stream.
-    @return an output stream containing a structured Dice object.
-*/
 ostream& operator<<( ostream& _os, const Dice& dice) {
-    _os << dice.toString(diceColour) << "\t" << dice.diceValue << "\t";
+    _os << dice.toString(dice.diceColour) << "\t" << dice.diceValue << "\t";
     return _os;
 }

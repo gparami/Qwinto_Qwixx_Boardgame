@@ -12,6 +12,8 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 class Dice;
 ostream& operator<<( ostream&, const Dice& );
 
@@ -26,10 +28,22 @@ public:
     };
 
     /**
+     * Creates a dice object and assignes a random value to it's face.
+     * @param diceColour
+     */
+    Dice(Colour diceColour);
+
+    /**
         Changes the face value of this dice to a random int between 1 and 6
         using the getRandomFaceValue function from the RandomDice structure.
     */
     void roll();
+
+    /**
+     * Getter method for the currentDice's face value.
+     * @return integer face value of the dice.
+     */
+    int getDiceValue() const;
 
     /**
         Converts the Dice enum to a string value.
@@ -42,7 +56,7 @@ public:
     /**
         Overloaded insertion operator to print the Dice to an output stream.
 
-        @param _os the output stream that
+        @param _os the output stream
         @param dice the dice object to be put into the output stream.
         @return an output stream containing a structured Dice object.
     */
@@ -52,6 +66,7 @@ private:
 
     Colour diceColour; //stores the diceColour enum.
     int diceValue; //stores the current dice face value.
+
 };
 
 
