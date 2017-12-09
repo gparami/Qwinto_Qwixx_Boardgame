@@ -12,6 +12,7 @@
 #include <iostream>
 #include "Dice.h"
 
+
 using namespace std;
 
 struct RollOfDice {
@@ -72,7 +73,6 @@ public:
         @param diceRoll the dice object to be put into the output stream.
         @return an output stream containing a structured RollOfDice object.
     */
-
     friend ostream& operator<<( ostream & _os, const RollOfDice & diceRoll);
 
 };
