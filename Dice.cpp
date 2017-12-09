@@ -7,13 +7,13 @@
 */
 #include "Dice.h"
 
-Dice::Dice(Dice::Colour colour) : diceColour(colour) { roll(); }
+Dice::Dice(Colour colour) : diceColour(colour) { roll(); }
 
 void Dice::roll() { diceValue = RandomDice::getRandomFaceValue(); }
 
 int Dice::getDiceValue() const { return diceValue; }
 
-std::string Dice::toString(const Dice::Colour &diceColour) const {
+std::string Dice::toString(const Colour &diceColour) const {
     std::string stringColour;
     if (diceColour == Colour::RED) {stringColour = "RED";}
     else if (diceColour == Colour::YELLOW) {stringColour = "YELLOW";}

@@ -8,6 +8,7 @@
 #ifndef QWINTO_QWIXX_BOARDGAME_DICE_H
 #define QWINTO_QWIXX_BOARDGAME_DICE_H
 
+#include "Colour.h"
 #include "RandomDice.h"
 #include <string>
 #include <iostream>
@@ -21,11 +22,6 @@ using namespace std;
 class Dice {
 
 public:
-
-
-    enum class Colour {
-        RED, YELLOW, GREEN, BLUE, WHITE
-    };
 
     /**
      * Creates a dice object and assignes a random value to it's face.
