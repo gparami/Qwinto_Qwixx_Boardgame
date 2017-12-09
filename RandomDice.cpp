@@ -14,9 +14,9 @@
 */
 int RandomDice::getRandomFaceValue() {
 
-    std::uniform_int_distribution<> dis(1, 6);
-    static std::random_device rand;
+    std::random_device rand;
     std::mt19937 gen(rand());
-    dis(gen);
+    std::uniform_int_distribution<> dis(1, 6);
+    return dis(gen);
 
 }
