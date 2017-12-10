@@ -24,6 +24,6 @@ std::string Dice::toString(const Colour &diceColour) const {
 }
 
 ostream& operator<<( ostream& _os, const Dice& dice) {
-    _os << dice.toString(dice.diceColour) << "\t" << dice.diceValue << "\t";
+    _os << dice.toString(dice.diceColour) << "\t" << dice.diceValue << "\n";
     return _os;
 }

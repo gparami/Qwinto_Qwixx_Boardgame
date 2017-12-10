@@ -4,8 +4,8 @@
 
 #include "RollOfDice.h"
 
-RollOfDice::RollOfDice(std::vector<Dice::Colour> pickedColours) {
-    for (Dice::Colour diceColour: pickedColours) {
+RollOfDice::RollOfDice(std::vector<Colour> pickedColours) {
+    for (Colour diceColour: pickedColours) {
         diceSet.emplace_back(diceColour);
     }
 }
@@ -17,7 +17,7 @@ RollOfDice::RollOfDice(vector<Dice> existingDices) {
 }
 
 void RollOfDice::roll() {
-    for (Dice currentDice: diceSet) {
+    for (Dice & currentDice: diceSet) {
         currentDice.roll();
     }
 }

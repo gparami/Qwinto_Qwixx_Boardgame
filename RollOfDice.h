@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <iostream>
+#include "Colour.h"
 #include "Dice.h"
 
 
@@ -27,7 +28,7 @@ public:
      * Constructs a RollOfDice object with multiple dices of user picked colours.
      * @param pickedColours vector of users choices of colours.
     */
-    RollOfDice(vector<Dice::Colour> pickedColours);
+    RollOfDice(vector<Colour> pickedColours);
 
     /**
      * Constructs a RollOfDice object with multiple existing dices.
