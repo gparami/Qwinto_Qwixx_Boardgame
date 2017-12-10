@@ -3,10 +3,64 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "Aesthetics.cpp"
+#include "Colour.h"
+#include "RandomDice.h"
+#include "Dice.h"
+#include "RollOfDice.h"
+
+using namespace std;
 
 int main() {
 
     Aesthetics::printIntro();
+
+    cout << "Testing Stuff" << endl;
+    //Testing Dice
+    Colour RED = Colour::RED;
+    Colour YELLOW = Colour::YELLOW;
+    Colour GREEN = Colour::GREEN;
+    Colour BLUE = Colour::BLUE;
+    Colour WHITE = Colour::WHITE;
+
+    Dice rD(RED);
+    Dice yD(YELLOW);
+    Dice gD(GREEN);
+
+    cout << rD;
+    rD.roll();
+    cout << "Rolled Red Dice: " << rD << endl;
+    cout << rD;
+    cout << yD;
+    cout << gD << endl;
+
+
+    //Testing RollOfDice
+    vector<Dice> diceSet;
+    diceSet.push_back(rD);
+    diceSet.push_back(yD);
+    diceSet.push_back(gD);
+
+    vector<Colour> qwintoSet;
+    qwintoSet.push_back(WHITE);
+    qwintoSet.push_back(BLUE);
+
+    RollOfDice setOne(diceSet);
+    RollOfDice setTwo(qwintoSet);
+
+    cout << "Set One: " << "\n" << setOne << endl;
+    setOne.roll();
+    cout << "Set One Rolled: \n" << setOne << endl;
+    int total = setOne;
+    cout << "Total of the Dice set: " << total << endl;
+
+    cout << "QwintoSet: \n" << setTwo << endl;
+    setTwo.roll();
+    cout << "QwintoSet: \n" << setTwo << endl;
+
+
+
+
     return 0;
 }
