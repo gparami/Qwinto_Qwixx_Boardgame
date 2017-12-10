@@ -9,6 +9,7 @@
 #include "RandomDice.h"
 #include "Dice.h"
 #include "RollOfDice.h"
+#include "QwintoRow.h"
 
 using namespace std;
 
@@ -58,6 +59,25 @@ int main() {
     cout << "QwintoSet: \n" << setTwo << endl;
     setTwo.roll();
     cout << "QwintoSet: \n" << setTwo << endl;
+
+    //Testing QwintoRow
+    QwintoRow<Colour::RED> rQwintoRow;
+    QwintoRow<Colour::YELLOW> yQwintoRow;
+
+    if (rQwintoRow.validate(1,setOne)) {
+        rQwintoRow[1] = setOne;
+    }
+
+    if (yQwintoRow.validate(4,setTwo)) {
+        yQwintoRow[4] = setTwo;
+    }
+
+    cout << rQwintoRow << endl;
+    cout << yQwintoRow << endl;
+
+
+
+
 
 
 
