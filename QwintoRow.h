@@ -6,8 +6,9 @@
 #define QWINTO_QWIXX_BOARDGAME_QWINTOROW_H
 
 #include "Dice.h"
+#include "Colour.h"
 
-template <const Dice::Colour C>
+template <Colour C>
 class QwintoRow {
 
 public:
@@ -15,12 +16,12 @@ public:
     /**
      * Constructor to create a QuintoRow with specific colour
      */
-//    QwintoRow();
+    QwintoRow();
 
     /**
      * Overloaded subscript operator[] to add an integer score at a certain index
      */
-    int &operator[](const int index);
+    int& operator[] ( int index);
 
     /**
      * Performs an error checking for adding a RollofDice to the row at a certain index.
@@ -28,7 +29,7 @@ public:
      * @param valueTwo second value to be added.
      * @return true if an addition is valid.
      */
-    bool validate(int valueOne, int valueTwo);
+    bool validate(int index, int value);
 
     /**
         Overloaded insertion operator to print a QwintoRow to an output stream.
@@ -39,9 +40,11 @@ public:
     friend ostream& operator<<( ostream & _os, const QwintoRow & currentQwintoRow);
 
 private:
-    int row[8];
+
+    int row[9];
+    Colour rowColour;
 
 };
 
-
+#include "QwintoRow.tpp"
 #endif //QWINTO_QWIXX_BOARDGAME_QWINTOROW_H

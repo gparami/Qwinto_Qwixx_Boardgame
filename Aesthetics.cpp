@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include <iostream>
 
-static struct Aesthetics {
+class Aesthetics {
 
+public:
     static void printIntro() {
 
         std::cout << R"(
